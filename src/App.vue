@@ -1,6 +1,5 @@
 <script setup>
-import TodoLIst from './components/Todolist/TodoLIst.vue';
-
+import TodoLIst from "./components/Todolist/TodoLIst.vue";
 
 </script>
 

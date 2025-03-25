@@ -7,7 +7,6 @@
 
  }
 
-
 const helloMan = (age, name) => {
   return `This is the person ${name} and this is his age: ${age}`;
   
