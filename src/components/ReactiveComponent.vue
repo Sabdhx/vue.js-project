@@ -1,7 +1,9 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { computed, reactive, ref } from "vue";
 
 const reactiveVariable = reactive({ count: 0 });
+const reactVariable = ref("this is vue.js value")
+
 const reactiveVariable2 = reactive(["ALI","Abdullah", "Umar"]);
 const handleChangesInReactive=()=>{
 reactiveVariable2[0]  = "usman"
@@ -11,7 +13,12 @@ reactiveVariable2[1]  = "amir"
 
 const reactiveVariable3 = reactive([ref("Ali"),ref("shanza"),ref("Abdullah")]);
 
+const computedValuesLetsSee = computed(()=>  reactVariable.value+"           "+reactVariable.value )
 
+const firstCondition = ref(false)
+const changingCondition=()=>{
+ return firstCondition.value =! firstCondition.value
+}
 
 </script>
 <template>
@@ -26,8 +33,10 @@ const reactiveVariable3 = reactive([ref("Ali"),ref("shanza"),ref("Abdullah")]);
 
     <h1>
 {{ reactiveVariable3[0] }}
+
     </h1>
+    <h1>{{ computedValuesLetsSee }}</h1> 
+    <button @click="changingCondition">change</button>
 
-
-
+  <p v-if="firstCondition">this will show if the condition is true</p>
 </template>

@@ -1,9 +1,9 @@
 <script setup>
-import ReactiveComponent from './components/ReactiveComponent.vue';
+import TodoLIst from './components/Todolist/TodoLIst.vue';
 
 
 </script>
 
 <template >
-  <ReactiveComponent/>
+  <TodoLIst/>
 </template>
